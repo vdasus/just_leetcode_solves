@@ -27,15 +27,5 @@ namespace UnitTestProject1
             var sut = Solution.Divide(num, div);
             sut.Should().Be(result);
         }
-
-        [Fact]
-        public void test()
-        {
-            (8 >> 1).Should().Be(4);
-            (5 >> 1).Should().Be(2);
-            (5 >> 2).Should().Be(1);
-            (5 >> 3).Should().Be(0);
-        }
-
     }
 }
