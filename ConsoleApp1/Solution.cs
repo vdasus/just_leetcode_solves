@@ -16,7 +16,8 @@ namespace ConsoleApp1
             var modDividend = Math.Abs((long)dividend);
             var modDiv = Math.Abs((long)divisor);
 
-            /*while (modDividend > 0)
+            /* Commented is enough to solve, but below is better
+             while (modDividend > 0)
             {
                 modDividend -= modDiv;
                 if (modDividend >= 0) result++;
