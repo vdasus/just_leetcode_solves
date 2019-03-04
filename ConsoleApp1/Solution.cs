@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApp1
 {
@@ -6,7 +7,7 @@ namespace ConsoleApp1
     {
         public static int Divide(int dividend, int divisor)
         {
-            if (dividend == Int32.MinValue && divisor < 0)
+            if (dividend == Int32.MinValue && divisor == -1)
                 return Int32.MaxValue;
 
             int result = 0;
@@ -17,7 +18,7 @@ namespace ConsoleApp1
             var modDiv = Math.Abs((long)divisor);
 
             /* Commented is enough to solve, but below is better
-             while (modDividend > 0)
+            while (modDividend > 0)
             {
                 modDividend -= modDiv;
                 if (modDividend >= 0) result++;
@@ -34,6 +35,33 @@ namespace ConsoleApp1
             }
 
             return signNegative ? -result : result;
+        }
+
+        public static int LongestValidParentheses(string s)
+        {
+            var REGEXP = @" 
+            \( 
+            (?:                 
+            (\(\))*
+		    |
+		    (?<open> \()
+            |
+            (?<-open> \))
+            )+
+            (?(open)(?!))
+            \)";
+
+            var cnt = 0;
+            
+            var m = Regex.Match(s, REGEXP, RegexOptions.IgnorePatternWhitespace);
+            
+            while (m.Success)
+            {
+                cnt += m.Value.Length;
+                m = m.NextMatch();
+            }
+
+            return cnt;
         }
     }
 }
