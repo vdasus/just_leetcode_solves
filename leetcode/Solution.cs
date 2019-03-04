@@ -60,7 +60,6 @@ namespace leetcode
             while (m.Success)
             {
                 cnt += m.Value.Length;
-
                 m = m.NextMatch();
             }
 
