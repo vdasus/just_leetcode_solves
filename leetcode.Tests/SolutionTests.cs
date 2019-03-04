@@ -9,7 +9,7 @@ namespace leetcodeTests
     {
         #region solution 1
 
-        [Trait("First solution", "2")]
+        [Trait("29. Divide Two Integers", "Unit")]
         [Theory]
         [InlineData(0, 1, 0)]
         [InlineData(1, 1, 1)]
@@ -34,7 +34,7 @@ namespace leetcodeTests
 
         #endregion
 
-        [Trait("32. Longest Valid Parentheses", "1")]
+        [Trait("32. Longest Valid Parentheses", "Unit")]
         [Theory]
         [InlineData("(()", 2)]
         [InlineData(")()())", 4)]
