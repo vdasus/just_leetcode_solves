@@ -1,9 +1,9 @@
 ﻿using System;
-using ConsoleApp1;
 using FluentAssertions;
+using leetcode;
 using Xunit;
 
-namespace UnitTestProject1
+namespace leetcodeTests
 {
     public class UnitTest1
     {
