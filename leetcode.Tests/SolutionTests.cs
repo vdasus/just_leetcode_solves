@@ -5,7 +5,7 @@ using Xunit;
 
 namespace leetcodeTests
 {
-    public class UnitTest1
+    public class SolutionTests
     {
         #region solution 1
 

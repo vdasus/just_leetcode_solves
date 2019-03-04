@@ -88,14 +88,14 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="SolutionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\leetcode.csproj">
+    <ProjectReference Include="..\leetcode\leetcode.csproj">
       <Project>{dd2a4315-bb64-4b2a-8cb9-e8de952c8c4b}</Project>
       <Name>leetcode</Name>
     </ProjectReference>
