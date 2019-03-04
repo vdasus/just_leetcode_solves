@@ -42,25 +42,23 @@ namespace leetcode
         //https://leetcode.com/problems/longest-valid-parentheses/
         public static int LongestValidParentheses(string s)
         {
-            // ()(()
-            // )()(())
             var REGEXP = @" 
-            \( 
+            (\( 
             (?:
 			  (?<open> \()
               |
               (?<-open> \))
             )*
 			(?(open)(?!))
-            \)";
+            \))+";
 
             var cnt = 0;
-            
+
             var m = Regex.Match(s, REGEXP, RegexOptions.IgnorePatternWhitespace);
-            
+
             while (m.Success)
             {
-                cnt += m.Value.Length;
+                cnt = Math.Max(m.Value.Length, cnt);
                 m = m.NextMatch();
             }
 

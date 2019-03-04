@@ -36,6 +36,8 @@ namespace leetcodeTests
 
         [Trait("32. Longest Valid Parentheses", "Unit")]
         [Theory]
+        [InlineData(")", 0)]
+        [InlineData("()", 2)]
         [InlineData("(()", 2)]
         [InlineData(")()())", 4)]
         [InlineData("()(())", 6)]
@@ -45,6 +47,7 @@ namespace leetcodeTests
         [InlineData("()()(((())))", 12)]
         [InlineData("()(()", 2)]
         [InlineData("()((())", 4)]
+        [InlineData("(()((())()", 6)]
         public void LongestValidParentheses(string data, int count)
         {
             var sut = Solution.LongestValidParentheses(data);
