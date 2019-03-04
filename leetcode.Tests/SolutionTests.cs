@@ -44,6 +44,7 @@ namespace leetcodeTests
         [InlineData("()()((()))", 10)]
         [InlineData("()()(((())))", 12)]
         [InlineData("()(()", 2)]
+        [InlineData("()((())", 4)]
         public void LongestValidParentheses(string data, int count)
         {
             var sut = Solution.LongestValidParentheses(data);

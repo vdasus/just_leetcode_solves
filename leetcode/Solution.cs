@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace leetcode
@@ -41,16 +42,16 @@ namespace leetcode
         //https://leetcode.com/problems/longest-valid-parentheses/
         public static int LongestValidParentheses(string s)
         {
+            // ()(()
+            // )()(())
             var REGEXP = @" 
             \( 
-            (?:                 
-            (\(\))*
-            |
-            (?<open> \()
-            |
-            (?<-open> \))
-            )+
-            (?(open)(?!))
+            (?:
+			  (?<open> \()
+              |
+              (?<-open> \))
+            )*
+			(?(open)(?!))
             \)";
 
             var cnt = 0;
