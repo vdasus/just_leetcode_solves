@@ -58,6 +58,7 @@ namespace ConsoleApp1
             while (m.Success)
             {
                 cnt += m.Value.Length;
+
                 m = m.NextMatch();
             }
 

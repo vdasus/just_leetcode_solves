@@ -43,6 +43,7 @@ namespace UnitTestProject1
         [InlineData("()((()))", 8)]
         [InlineData("()()((()))", 10)]
         [InlineData("()()(((())))", 12)]
+        [InlineData("()(()", 2)]
         public void LongestValidParentheses(string data, int count)
         {
             var sut = Solution.LongestValidParentheses(data);
