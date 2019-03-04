@@ -45,8 +45,8 @@ namespace leetcode
             \( 
             (?:                 
             (\(\))*
-		    |
-		    (?<open> \()
+            |
+            (?<open> \()
             |
             (?<-open> \))
             )+
