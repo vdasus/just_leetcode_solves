@@ -74,9 +74,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ConsoleApp1.csproj">
+    <ProjectReference Include="..\ConsoleApp1\leetcode.csproj">
       <Project>{dd2a4315-bb64-4b2a-8cb9-e8de952c8c4b}</Project>
-      <Name>ConsoleApp1</Name>
+      <Name>leetcode</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

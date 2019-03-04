@@ -5,7 +5,7 @@ namespace ConsoleApp1
 {
     public static class Solution
     {
-        https://leetcode.com/problems/divide-two-integers/
+        //https://leetcode.com/problems/divide-two-integers/
         public static int Divide(int dividend, int divisor)
         {
             if (dividend == Int32.MinValue && divisor == -1)
